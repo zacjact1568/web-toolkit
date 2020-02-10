@@ -1,1 +1,1 @@
-rootProject.name = "music-upload-helper"
+rootProject.name = "web-toolkit"

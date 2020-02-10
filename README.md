@@ -1,3 +1,3 @@
-# Music Upload Helper
+# Web Toolkit
 
-An upload helper for https://life.zackzhang.net/music, based on [Spring Boot](https://spring.io/projects/spring-boot), written in [Kotlin](https://kotlinlang.org).
+An online toolkit for personal use, based on [Spring Boot](https://spring.io/projects/spring-boot), written in [Kotlin](https://kotlinlang.org).

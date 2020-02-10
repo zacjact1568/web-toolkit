@@ -1,10 +1,10 @@
-package net.zackzhang.code.musicuploadhelper
+package net.zackzhang.code.webtoolkit
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest
 
 @SpringBootTest
-class MusicUploadHelperApplicationTests {
+class WebToolkitApplicationTests {
 
     @Test
     fun contextLoads() {

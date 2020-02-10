@@ -1,11 +1,11 @@
-package net.zackzhang.code.musicuploadhelper
+package net.zackzhang.code.webtoolkit
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class MusicUploadHelperApplication
+class WebToolkitApplication
 
 fun main(args: Array<String>) {
-    runApplication<MusicUploadHelperApplication>(*args)
+    runApplication<WebToolkitApplication>(*args)
 }
