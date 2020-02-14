@@ -15,7 +15,7 @@ class MusicMetaDataAdvice {
     @ResponseStatus(HttpStatus.FORBIDDEN)
     fun handleWrongPasswordException(e: WrongPasswordException) = mapOf(
             "code" to e.code,
-            "msg" to e.message!!
+            "message" to e.message!!
     )
 
     // 拦截默认的缺少参数异常
@@ -23,6 +23,6 @@ class MusicMetaDataAdvice {
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     fun handleMissingServletRequestParameterException(e: MissingServletRequestParameterException) = mapOf(
             "code" to 400,
-            "msg" to e.message
+            "message" to e.message
     )
 }

@@ -39,7 +39,7 @@ class MusicMetaDataController {
         val cover = "$albumArtist $album".toLowerCase().replace(Regex("\\W+"), "-").trimEnd('-')
         return mapOf(
                 "code" to 200,
-                "msg" to "OK",
+                "message" to "OK",
                 "title" to newTitle,
                 "artist" to newArtist,
                 "cover" to cover
