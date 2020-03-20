@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper
 import com.qiniu.util.Auth
 import com.qiniu.util.StringMap
 import net.zackzhang.code.webtoolkit.exception.NoSuchFolderException
+import net.zackzhang.code.webtoolkit.exception.WrongPasswordException
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestParam
@@ -11,6 +12,9 @@ import org.springframework.web.bind.annotation.RestController
 
 @RestController
 class QiniuUploadTokenController {
+
+    @Value("\${password}")
+    private lateinit var password: String
 
     @Value("\${upload-token.access-key}")
     private lateinit var accessKey: String
@@ -24,8 +28,14 @@ class QiniuUploadTokenController {
     @PostMapping("/qiniu-upload-token")
     fun generate(
             @RequestParam("folder") folder: String,
-            @RequestParam("file") file: String
+            @RequestParam("file") file: String,
+            @RequestParam("password") password: String
     ): Map<String, Any> {
+        // 密码
+        if (password != this.password) {
+            throw WrongPasswordException()
+        }
+        // 文件夹限制
         if (folder != "post" && folder != "music") {
             throw NoSuchFolderException(folder)
         }

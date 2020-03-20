@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController
 @RestController
 class MusicMetaDataController {
 
-    @Value("\${metadata.password}")
+    @Value("\${password}")
     private lateinit var password: String
 
     @PostMapping("/music-meta-data")
